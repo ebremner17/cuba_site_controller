@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall for CUBA/ACCAU sites.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function cuba_site_controllerinstall() {
+
+  // Make sure the theme is installed.
+  $theme_handler = \Drupal::service('theme_handler');
+  $theme_handler->install(['claro']);
+
+  // Set it as the admin theme.
+  $config = \Drupal::service('config.factory')->getEditable('system.theme');
+  $config->set('admin', 'claro')->save();
+
+}
+

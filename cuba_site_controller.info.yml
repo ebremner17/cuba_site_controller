@@ -1,0 +1,5 @@
+name: 'Cuba site controller'
+description: 'Site controller for all CUBA/ACCAU site.'
+type: module
+core_version_requirement: ^8 || ^9
+
