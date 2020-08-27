@@ -1,0 +1,7 @@
+{
+  "name": "ebremner17/cua_site_controller",
+  "description": "Site controller for CUBA/ACCAU sites.",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/ebremner17/cuba_site_controller",
+  "keywords": ["Drupal"]
+}
