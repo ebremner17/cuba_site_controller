@@ -2,21 +2,20 @@
 
 /**
  * @file
- * Install, update and uninstall for CUBA/ACCAU sites.
+ * Install, update and uninstall for Griffin Brothers Site Controller.
  */
 
 /**
  * Implements hook_install().
  */
-function cuba_site_controllerinstall() {
+function cuba_site_controller_install() {
+  \Drupal::service('theme_installer')->install(['cuba_theme']);
+  \Drupal::service('theme_installer')->install(['seven']);
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'cuba_theme')
+    ->save();
 
-  // Make sure the theme is installed.
-  $theme_handler = \Drupal::service('theme_handler');
-  $theme_handler->install(['claro']);
-
-  // Set it as the admin theme.
   $config = \Drupal::service('config.factory')->getEditable('system.theme');
-  $config->set('admin', 'claro')->save();
-
+  $config->set('admin', 'seven')->save();
 }
-

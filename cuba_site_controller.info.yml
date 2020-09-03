@@ -1,5 +1,15 @@
-name: 'Cuba site controller'
-description: 'Site controller for all CUBA/ACCAU site.'
+name: 'CUBA/ACCAU site controller'
 type: module
-core_version_requirement: ^8 || ^9
-
+core_version_requirement: '^8 || ^9'
+dependencies:
+  - ckeditor
+  - content_translation
+  - editor
+  - field
+  - filter
+  - language
+  - layout_paragraphs
+  - paragraphs
+  - pathauto
+themes:
+  - cuba_theme
